@@ -43,7 +43,11 @@
 #include <stdbool.h>
 #include <sys/types.h>
 #include <unistd.h>
+#ifdef linux
+#include <linux/sysctl.h>
+#else
 #include <sys/sysctl.h>
+#endif
 #include <sys/file.h>
 #include <sys/stat.h>
 #include <sys/wait.h>
